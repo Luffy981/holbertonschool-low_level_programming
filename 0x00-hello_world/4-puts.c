@@ -5,7 +5,7 @@
 int main(void)
 {
     /*Function puts*/
-char Holberton[] = "\"Programming is like building a multilingual puzzle";
-puts(Holberton);
+"\"Programming is like building a multilingual puzzle";
+puts;
 return (0);
 }
