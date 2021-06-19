@@ -10,7 +10,9 @@ int main(void)
 	for (i = 'a'; i <= 'z'; i++)
 	{
 		putchar(i);
-	}
-	putchar("\n");
-	return (0);
+		if (i > 'z')
+		{
+			putchar(i = '\0')
+		}
+		return (0);
 }
