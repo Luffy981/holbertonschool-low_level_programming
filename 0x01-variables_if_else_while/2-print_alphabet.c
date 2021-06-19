@@ -10,10 +10,7 @@ int main(void)
 	for (i = 'a'; i <= 'z'; i++)
 	{
 		putchar(i);
-		if (i > 'z')
-		{
-			putchar(i = '\n');
-		}
 	}
-		return (0);
+	putchar('\n');
+	return (0);
 }
