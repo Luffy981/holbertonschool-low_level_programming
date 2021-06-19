@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	char ch;
+	char c;
 
-	for (ch = "A" ; ch <= "Z" ; ch++)
-		putchar("%c\n", ch);
-	for (ch = "a" ; ch <= "z" ; ch++)
-		putchar("%c\n", ch);
+	for (c = "A" ; c <= "Z" ; c++)
+		putchar("%c\n", c);
+	for (c = "a" ; c <= "z" ; c++)
+		putchar("%c\n", c);
 	return (0);
 }
