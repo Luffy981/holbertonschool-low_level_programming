@@ -11,9 +11,5 @@ int main(void)
 	{
 		putchar(i);
 	}
-	for (i = "\n")
-	{
-		putchar(i);
-	}
 	return (0);
 }
