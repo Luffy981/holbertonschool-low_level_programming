@@ -5,15 +5,14 @@
  */
 int main(void)
 {
-	char c;
+	char i;
 
-	for "char" (c = "A" ; c <= "Z" ; c++)
-	{
-		putchar("%c\n", c);
-	}
-	for "char" (c = "a" ; c <= "z" ; c++)
-	{
-		putchar("%c\n", c);
-	}
+	for (i = 'A'; i <= 'Z'; i++)
+		putchar("%c ", i);
+
+
+	for (i = 'a'; i <= 'z'; i++)
+		putchar("%c ", i);
+
 	return (0);
 }
