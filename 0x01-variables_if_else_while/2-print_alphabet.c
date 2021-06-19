@@ -9,7 +9,8 @@ int main(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		putchar("i\n");
+		putchar(i);
 	}
+	write(2, "\n", 1);
 	return (0);
 }
