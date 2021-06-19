@@ -12,7 +12,7 @@ int main(void)
 		putchar(i);
 		if (i > 'z')
 		{
-			putchar(i = '\0');
+			putchar(i = '\n');
 		}
 	}
 		return (0);
