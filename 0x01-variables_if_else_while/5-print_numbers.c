@@ -9,10 +9,7 @@ int main(void)
 
 	for (i = '0' ; i <= '9' ; i++)
 	{
-		if (i < 10)
-		{
-			putchar(i);
-		}
+		putchar(i);
 	}
 	return (0);
 }
