@@ -10,7 +10,7 @@ int main(void)
 	i = 0;
 	if (i < 10)
 	{
-		printf("%d\n", i);
+		printf("%d\n", i++);
 	}
 	return (0);
 }
