@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "_putchar.c"
+#include "holberton.h"
 /**
  * main - Function main
  * Return: Return value "n"
@@ -15,15 +15,15 @@ int main(void)
 	char (t);
 	char (n);
 
-	_putchar("H");
-	_putchar("o");
-	_putchar("l");
-	_putchar("b");
-	_putchar("e");
-	_putchar("r");
-	_putchar("t");
-	_putchar("o");
-	_putchar("n");
+	_putchar(H);
+	_putchar(o);
+	_putchar(l);
+	_putchar(b);
+	_putchar(e);
+	_putchar(r);
+	_putchar(t);
+	_putchar(o);
+	_putchar(n);
 	_putchar('\n');
 	return (0);
 }
