@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * main - Function main
@@ -6,24 +5,15 @@
  */
 int main(void)
 {
-	char (H);
-	char (o);
-	char (l);
-	char (b);
-	char (e);
-	char (r);
-	char (t);
-	char (n);
-
-	_putchar(H);
-	_putchar(o);
-	_putchar(l);
-	_putchar(b);
-	_putchar(e);
-	_putchar(r);
-	_putchar(t);
-	_putchar(o);
-	_putchar(n);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
 	_putchar('\n');
 	return (0);
 }
