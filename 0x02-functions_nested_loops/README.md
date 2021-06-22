@@ -1,1 +1,1 @@
-Proyect about unctions and nested loops
+Proyect about functions and nested loops
