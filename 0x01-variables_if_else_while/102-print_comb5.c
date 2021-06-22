@@ -25,14 +25,16 @@ int main(void)
 						putchar (32);
 						putchar (c);
 						putchar (d);
-						putchar (44);
-						putchar (32);
+						if (a != 57 || b != 56)
+						{
+							putchar (44);
+							putchar (32);
+						}
 					}
 				}
 			}
 		}
 	}
 	putchar ('\n');
-
 	return (0);
 }
