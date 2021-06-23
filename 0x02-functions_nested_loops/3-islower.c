@@ -10,9 +10,5 @@ int _islower(int c)
 	{
 		return (0);
 	}
-	if ((c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	return (1);
 }
