@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main - Function main
+ * print_alphabet_x10 - Function to count alphabet
  * Return: Return value "n"
  */
-int main(void)
+void print_alphabet_x10(void)
 {
 	char i;
 	int j;
@@ -16,5 +16,4 @@ int main(void)
 		}
 		_putchar ('\n');
 	}
-	return (0);
 }
