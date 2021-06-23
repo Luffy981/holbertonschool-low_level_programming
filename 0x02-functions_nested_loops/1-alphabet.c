@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main - Function main
+ * print_alphabet - Function to print lower alphabet
  * Return: Return value "n"
  */
-int main(void)
+void print_alphabet(void)
 {
 	int i;
 
@@ -12,5 +12,4 @@ int main(void)
 		_putchar(i);
 	}
 	_putchar ('\n');
-	return (0);
 }
