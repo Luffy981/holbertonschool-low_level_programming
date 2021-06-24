@@ -1,11 +1,13 @@
 #include "holberton.h"
 /**
- * print_alphabet - Function to print lower alphabet
+ * _isdigit - Function to print lower alphabet
+ * @c: Parameter
+ *
  * Return: Return value "n"
  */
 int _isdigit(int c)
 {
-	if (c > 47 && c <=57)
+	if (c > 47 && c <= 57)
 	{
 		return (1);
 	}
