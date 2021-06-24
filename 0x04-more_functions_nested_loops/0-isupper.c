@@ -11,9 +11,5 @@ int _isupper(int c)
 	{
 		return (1);
 	}
-	if (c == 97 && c <= 122)
-	{
-		return (0);
-	}
 	return (0);
 }
