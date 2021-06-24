@@ -14,16 +14,14 @@ void more_numbers(void)
 	{
 		for (b = 0 ; b <= 14 ; b++)
 		{
-			if (b >= 0 && b <= 9)
-			{
-				_putchar(b + '0');
-			} else
+			s = b % 10 ;
+			if ( b >= 10 )
 			{
 				r = b / 10;
 				s = b % 10;
 				_putchar(r + '0');
-				_putchar(s + '0');
 			}
+			_putchar(s+'0');
 		}
 		_putchar('\n');
 	}
