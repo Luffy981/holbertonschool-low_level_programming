@@ -1,17 +1,19 @@
 #include "holberton.h"
 /**
- * times_table - Function to print table
+ * print_diagonal - Function to print \ in diagonal
+ * @n: Parameter
  * Return: Return value "n"
  */
 void print_diagonal(int n)
 {
 	int i;
 	int j;
-	if(n>=1)
+
+	if (n >= 1)
 	{
-		for(i=0 ;i<n;i++)
+		for (i = 0 ; i < n ; i++)
 		{
-			for(j=1 ; j <= i ; j++)
+			for (j = 1 ; j <= i ; j++)
 			{
 				_putchar(' ');
 			}
@@ -19,5 +21,8 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	if (n < 1)
+	{
+		_putchar('\n');
+	}
 }
