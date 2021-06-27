@@ -6,57 +6,35 @@
  */
 void print_number(int n)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	int b, i, f, t;
+	long int num;
+	long int r;
 
+	f = 1;
+	b = 1;
 	if (n < 0)
 	{
-		if (n > -10)
-		{
-			a = (n % 10) * (-1);
-			_putchar('-');
-			_putchar(a + '0');
-		}
-		if (n > -100)
-		{
-			a = (n / 10) * (-1);
-			b = (n % 10) * (-1);
-			_putchar('-');
-			_putchar(a + '0');
-			_putchar(b + '0');
-		}
-	} else if (n >= 0)
+		_putchar('-');
+		num = -n;
+	} else
 	{
-		if (n < 10)
-		{
-			a = (n % 10);
-			_putchar(a + '0');
-		} else if (n < 100 && n > 10)
-		{
-			a = (n / 10);
-			b = (n % 10);
-			_putchar(a + '0');
-			_putchar(b + '0');
-		} else if (n < 1000 && n > 100)
-		{
-			a = (n / 100);
-			b = (n / 10) % 10;
-			c = (n % 10);
-			_putchar(a + '0');
-			_putchar(b + '0');
-			_putchar(c + '0');
-		} else if (n < 10000 && n > 1000)
-		{
-			a = (n / 1000);
-			b = (n / 100) % 10;
-			c = (n / 10) % 10;
-			d = (n % 10);
-			_putchar(a + '0');
-			_putchar(b + '0');
-			_putchar(c + '0');
-			_putchar(d + '0');
-		}
+		num = n;
+	}
+	r = num;
+	while (num / 10 >= 1)/*contador de digitos = b */
+	{
+		num = num / 10;
+		b++;
+	}
+	for (i = 1 ; i < b ; i++)/*potencia de 10*/
+	{
+		f *= 10;
+	}
+	while (b >= 1)/*imprime digitos de izquierda a derecha*/
+	{
+		t = (r / f) % 10;
+		f = f / 10;
+		_putchar(t + '0');
+		b--;
 	}
 }
