@@ -7,8 +7,8 @@
 void print_number(int n)
 {
 	int b, i, f, t;
-	long int num;
-	long int r;
+	unsigned int num;
+	unsigned int r;
 
 	f = 1;
 	b = 1;
