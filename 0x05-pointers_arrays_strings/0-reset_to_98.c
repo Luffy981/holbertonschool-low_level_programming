@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * print_alphabet - Function to print lower alphabet
- * Return: Return value "n"
+ * reset_to_98 - Function to reset var
+ * @n: Parameter
  */
 void reset_to_98(int *n)
 {
-	*n=98;
+	*n = 98;
 }
