@@ -13,7 +13,7 @@ int _atoi(char *s)
 
 	sign = 1;
 	i = 0;
-	while (s[i] != '\0')
+	while (!(s[i] >= '0' && s[i] <= '9'))
 	{
 		if (s[i] == 45)
 		{
@@ -31,6 +31,5 @@ int _atoi(char *s)
 		}
 		a++;
 	}
-	d = d * (sign);
-	return (d);
+	return (d * sign);
 }
