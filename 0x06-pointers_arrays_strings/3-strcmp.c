@@ -28,14 +28,14 @@ int _strcmp(char *s1, char *s2)
 	{
 		while (s1[r] != '\0')
 		{
-			a = (s1[r] - s2[r]) + a;
+			a = (s1[0] - s2[0]);
 			r++;
 		}
 	} else if (i < j)
 	{
 		while (s2[r] != '\0')
 		{
-			a = (s1[r] - s2[r]) + a;
+			a = (s1[0] - s2[0]);
 			r++;
 		}
 	}
