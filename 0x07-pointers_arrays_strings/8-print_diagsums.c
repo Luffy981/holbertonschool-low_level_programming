@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "holberton.h"
+#include <unistd.h>
 /**
  * print_diagsums - prints sum of the two diagonals of a square matrix
  * @a: Parameter
  * @size: Parameter
  * Return: Return value
  */
-void print_diagsums(int *a, int size)
+void print_diagsums(int *a, int n)
 {
 	int i;
 	unsigned int sum, sum1;
