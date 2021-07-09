@@ -1,8 +1,6 @@
 #include "holberton.h"
 /**
- * is_palindrome - function returns 1 if a string is a palindrome and 0 if not
- * isPalRec - Function to recursion
- * _strlen_recursion - Functio to return string length
+ * isPalRec - function to recursion
  * @str: Parameter
  * @s: Parameter
  * @e: Parameter
@@ -28,8 +26,11 @@ int isPalRec(char str[], int s, int e)
 
 	return (1);
 }
-
-
+/**
+ * is_palindrome - Function palindrome
+ * @str: Parameter
+ * Return: Return value
+ */
 int is_palindrome(char str[])
 {
 	int n = _strlen_recursion(str);
@@ -41,6 +42,11 @@ int is_palindrome(char str[])
 
 	return (isPalRec(str, 0, n - 1));
 }
+/**
+ * _strlen_recursion - Function lo length string
+ * @str: Parameter
+ * Return: Return value length string
+ */
 int _strlen_recursion(char str[])
 {
 	if (*str)
