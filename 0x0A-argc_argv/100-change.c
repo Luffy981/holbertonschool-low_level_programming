@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		{
 			if (e_s(argv[i]) == 2 || e_s(argv[i]) == 1)
 			{
-				printf("0");
+				printf("0\n");
 				return (0);
 			} else if (e_s(argv[i]) == 0)
 			{
