@@ -33,37 +33,32 @@ int e_s(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int i, a = 25, b = 10, c = 5, d = 2, e = 1, cent;
+	int  cent[] = {25, 10, 5, 2, 1};
+	int a = 0;
+	int r = 0;
+	int m;
 
 	if (argc == 2)
 	{
-		for (i = 1 ; i < argc ; i++)
+		if (e_s(argv[1]) == 2 || e_s(argv[1]) == 1)
 		{
-			if (e_s(argv[i]) == 2 || e_s(argv[i]) == 1)
+			printf("0\n");
+			return (0);
+
+		} else if (e_s(argv[1]) == 0)
+		{
+			m = atoi(argv[1]);
+			while (cent[a] != '\0' && m > 0)
 			{
-				printf("0\n");
-				return (0);
-			} else if (e_s(argv[i]) == 0)
-			{
-				cent = atoi(argv[i]);
-				if (cent % a == 0)
+				while (m - cent[a] >= 0)
 				{
-					printf("%d\n", cent / a);
-				} else if (cent % b == 0)
-				{
-					printf("%d\n", cent / b);
-				} else if (cent % c == 0)
-				{
-					printf("%d\n", cent / c);
-				} else if (cent % d == 0)
-				{
-					printf("%d\n", cent / d);
-				} else if (cent % e == 0)
-				{
-					printf("%d\n", cent / e);
+					m = m - cent[a];
+					r += 1;
 				}
-				return (0);
+				a++;
 			}
+			printf("%d\n", r);
+			return (0);
 		}
 	}
 	printf("Error\n");
