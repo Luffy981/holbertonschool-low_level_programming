@@ -16,6 +16,10 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
+	if ( p == NULL)
+	{
+		return(NULL);
+	}
 	while (i < size)
 	{
 		*(p + i) = c;
