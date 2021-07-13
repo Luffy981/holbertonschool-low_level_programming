@@ -12,14 +12,15 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 
 	i = 0;
-	if (size == '0')
+	if (size == 0)
 	{
 		return(NULL);
-	}
-	while (i < size)
-	{
-		*(p + i) = c;
-		i++;
+	}else{
+			while (i < size)
+			{
+				*(p + i) = c;
+				i++;
+			}
 	}
 	return (p);
 }
