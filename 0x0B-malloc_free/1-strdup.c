@@ -27,7 +27,7 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	int i = 0;
-	char *p = (char *)malloc(_strlen(str));
+	char *p = (char *)malloc(_strlen(str) + 1);
 
 	if (str == NULL || p == NULL)
 	{
