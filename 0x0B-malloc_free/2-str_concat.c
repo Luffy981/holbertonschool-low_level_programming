@@ -9,6 +9,10 @@ int _strlen(char *s)
 {
 	int i = 0;
 
+	if (s == NULL)
+	{
+		return (0);
+	}
 	while (s[i] != 0)
 	{
 		i++;
@@ -35,16 +39,25 @@ char *str_concat(char *s1, char *s2)
 	a = 0;
 	while (i <= (_strlen(s1) + _strlen(s2)))
 	{
-		if (i < _strlen(s1))
+		if (s1 != NULL && s2 != NULL)
 		{
-			*(p + i) = *(s1 + i);
-		} else if( _strlen(s2)==0)
-		{
-			break;
-		} else
-		{
+			if (i < _strlen(s1))
+			{
+				*(p + i) = *(s1 + i);
+			} else
+			{
 			*(p + i) = *(s2 + a);
 			a++;
+			}
+		} else if (s1 == NULL)
+		{
+			*(p + i) = *(s2 + i);
+		} else if (s2 == NULL)
+		{
+			*(p + i) = *(s1 + i);
+		} else
+		{
+			*(p + i) = '\0';
 		}
 		i++;
 	}
