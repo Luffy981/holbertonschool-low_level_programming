@@ -38,6 +38,9 @@ char *str_concat(char *s1, char *s2)
 		if (i < _strlen(s1))
 		{
 			*(p + i) = *(s1 + i);
+		} else if( _strlen(s2)==0)
+		{
+			break;
 		} else
 		{
 			*(p + i) = *(s2 + a);
