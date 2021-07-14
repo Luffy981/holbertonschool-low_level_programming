@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	i = 0;
 	a = 0;
-	while (i <= (_strlen(s1) + _strlen(s2)+1))
+	while (i <= (_strlen(s1) + _strlen(s2)))
 	{
 		if (s1 != NULL && s2 != NULL)
 		{
@@ -49,10 +49,10 @@ char *str_concat(char *s1, char *s2)
 			*(p + i) = *(s2 + a);
 			a++;
 			}
-		} else if (s1 == NULL)
+		} else if (s1 == NULL && s2 != NULL)
 		{
 			*(p + i) = *(s2 + i);
-		} else if (s2 == NULL)
+		} else if (s2 == NULL && s1 != NULL)
 		{
 			*(p + i) = *(s1 + i);
 		} else if (s1 == NULL && s2 == NULL)
