@@ -1,10 +1,8 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * string_nconcat - Function to concatenates two strings
- * @s1: Parameter
- * @s2: Parameter
- * @n: Parameter
+ * _strlen - Function to string length
+ * @s: Parameter
  * Return: Return value
  */
 unsigned int _strlen(char *s)
@@ -21,6 +19,13 @@ unsigned int _strlen(char *s)
 	}
 	return (i);
 }
+/**
+ * string_nconcat - Function to concatenates two strings
+ * @s1: Parameter
+ * @s2: Parameter
+ * @n: Parameter
+ * Return: Return value
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p = malloc(_strlen(s1) + n + 1);
