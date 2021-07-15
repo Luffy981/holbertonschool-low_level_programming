@@ -53,13 +53,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 				*(p + i) = *(s2 + a);
 				a++;
 			}
-		} else if (s1 == NULL && s2 != NULL)
+		} else if (s1 == NULL && n != 0)
 		{
 			*(p + i) = *(s2 + i);
-		} else if (s2 == NULL && s1 != NULL)
+		} else if (n == 0 && s1 != NULL)
 		{
 			*(p + i) = *(s1 + i);
-		} else if (s1 == NULL && s2 == NULL)
+		} else if (s1 == NULL && n == 0)
 		{
 			*(p + i) = 0;
 		}
