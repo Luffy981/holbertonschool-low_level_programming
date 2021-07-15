@@ -24,6 +24,13 @@ int **alloc_grid(int width, int height)
 	}
 	for (i = 0 ; i < width ; i++)
 	{
+		if (p[i] == NULL)
+		{
+			return (NULL);
+		}
+	}
+	for (i = 0 ; i < width ; i++)
+	{
 		for (j = 0 ; j < height ; j++)
 		{
 			p[i][j] = 0;
