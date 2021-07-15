@@ -29,7 +29,8 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p = malloc(_strlen(s1) + n + 1);
-	unsigned int i;
+	unsigned int i = 0;
+	unsigned int a = 0;
 
 	if (p == NULL)
 	{
@@ -39,16 +40,29 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = _strlen(s2);
 	}
-	for (i = 0 ; i < _strlen(s1) + n ; i++)
+	while (i <= (_strlen(s1) + n))
 	{
-		if (i < _strlen(s1))
+		if (s1 != NULL && n != 0)
+		{
+			if (i < _strlen(s1))
+			{
+				*(p + i) = *(s1 + i);
+			} else
+			{
+				*(p + i) = *(s2 + a);
+				a++;
+			}
+		} else if (s1 == NULL && n != 0)
+		{
+			*(p + i) = *(s2 + i);
+		} else if (n == 0 && s1 != NULL)
 		{
 			*(p + i) = *(s1 + i);
-		} else
+		} else if (s1 == NULL && n == 0)
 		{
-			*(p + i) = *s2;
-			s2++;
+			*(p + i) = 0;
 		}
+		i++;
 	}
 	return (p);
 }
