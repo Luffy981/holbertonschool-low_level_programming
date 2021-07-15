@@ -28,17 +28,18 @@ unsigned int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p = malloc(_strlen(s1) + n + 1);
+	char *p;
 	unsigned int i = 0;
 	unsigned int a = 0;
 
-	if (p == NULL)
-	{
-		return (NULL);
-	}
 	if (n >= _strlen(s2))
 	{
 		n = _strlen(s2);
+	}
+	p = malloc(_strlen(s1) + n + 1);
+	if (p == NULL)
+	{
+		return (NULL);
 	}
 	while (i <= (_strlen(s1) + n))
 	{
