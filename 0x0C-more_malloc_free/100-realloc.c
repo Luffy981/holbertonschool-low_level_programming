@@ -10,10 +10,10 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 
-	ptr = malloc(sizeof(int) * old_size);/*Reserve memory*/
+	ptr = malloc(old_size);/*Reserve memory*/
 	if (ptr == NULL)/*Check malloc*/
 	{
-		ptr = malloc(sizeof(int) * new_size);
+		ptr = malloc(new_size);
 		if (ptr == NULL)
 		{
 			free(ptr);
@@ -36,7 +36,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);/*Free amemory reserved*/
 		return (NULL);
 	}
-	ptr = realloc(ptr, sizeof(int) * new_size);/*Reserve memory again*/
+	ptr = realloc(ptr, new_size);/*Reserve memory again*/
 	if (ptr == NULL)/*Check malloc again */
 	{
 		free(ptr);
