@@ -4,6 +4,7 @@
  * _realloc - Function to reallocates a memory block using malloc and free
  * @old_size: Is the size, in bytes, of the allocated space for ptr
  * @new_size: Is the new size, in bytes of the new memory block
+ * @ptr : Parameter
  * Return: Return ptr
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
