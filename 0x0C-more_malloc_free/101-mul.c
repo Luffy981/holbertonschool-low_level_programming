@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1 ; i < argc ; i++)
 		{
-			if (e_s(argv[i]) == 1)
+			if (e_s(argv[i]) == 1 || e_s(argv[i]) == 2)
 			{
 				for (j = 0 ; j < _strlen(er) ; j++)
 				{
