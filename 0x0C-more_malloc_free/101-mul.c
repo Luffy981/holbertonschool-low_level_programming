@@ -27,6 +27,19 @@ int _atoi(char *s)
 	return (num * sign);
 }
 /**
+ * _isdigit - function to check if it is a number
+ * @c: Parameter
+ * Return: Return Value
+ */
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
+}
+/**
  * e_s - Function to evalue string if is a number
  * @s: Parameter
  * Return: Return value "n"
@@ -42,7 +55,7 @@ int e_s(char *s)
 		{
 			return (2);
 		}
-		if (!(isdigit(s[a])))
+		if (_isdigit(s[a]) == 0)
 		{
 			return (1);
 		}
