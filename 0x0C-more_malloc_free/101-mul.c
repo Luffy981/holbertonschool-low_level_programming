@@ -1,11 +1,35 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <ctype.h>
 /**
- * e_s - Function to evalue string if is a digit
+ * _atoi - Converts a string to an integer.
+ * @s: The string to be converted.
+ *
+ * Return: The integer value of the converted string.
+ */
+int _atoi(char *s)
+{
+	int sign = 1;
+	unsigned int num = 0;
+
+	do {
+		if (*s == '-')
+			sign *= -1;
+
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
+			break;
+
+	} while (*s++);
+
+	return (num * sign);
+}
+/**
+ * e_s - Function to evalue string if is a number
  * @s: Parameter
- * Return: Return value
+ * Return: Return value "n"
  */
 int e_s(char *s)
 {
@@ -27,6 +51,65 @@ int e_s(char *s)
 	return (0);
 }
 /**
+ * _strlen - Function to string length
+ * @s: Parameter
+ * Return: Return value "n"
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	if (s == NULL)
+	{
+		return (0);
+	}
+	while (s[i] != 0)
+	{
+		i++;
+	}
+	return (i);
+}
+/**
+ * print_number - Function to print a integer number
+ * @n: Parameter
+ * Return: Return value "n"
+ */
+void print_number(int n)
+{
+	int b, i, f, t;
+	unsigned int num;
+	unsigned int r;
+
+	f = 1;
+	b = 1;
+	if (n < 0)
+	{
+		_putchar('-');
+		num = -n;
+	} else
+	{
+		num = n;
+	}
+	r = num;
+	while (num / 10 >= 1)/*contador de digitos = b */
+	{
+		num = num / 10;
+		b++;
+	}
+	for (i = 1 ; i < b ; i++)/*potencia de 10*/
+	{
+		f *= 10;
+	}
+	while (b >= 1)/*imprime digitos de izquierda a derecha*/
+	{
+		t = (r / f) % 10;
+		f = f / 10;
+		_putchar(t + '0');
+		b--;
+	}
+}
+/**
  * main - Function
  * @argc: Parameter
  * @argv: Parameter
@@ -36,6 +119,8 @@ int main(int argc, char *argv[])
 {
 	int mult = 1;
 	int i;
+	int j;
+	char er[] = "Error\n";
 
 	if (argc == 3)
 	{
@@ -43,16 +128,23 @@ int main(int argc, char *argv[])
 		{
 			if (e_s(argv[i]) == 1)
 			{
-				printf("Error\n");
+				for (j = 0 ; j < _strlen(er) ; j++)
+				{
+					_putchar(er[j]);
+				}
 				exit(98);
 				return (0);
 			}
-			mult = atoi(argv[i]) * mult;
+			mult = _atoi(argv[i]) * mult;
 		}
-		printf("%d\n", mult);
+		print_number(mult);
+		_putchar('\n');
 		return (0);
 	}
-	printf("Error\n");
+	for (j = 0 ; j < _strlen(er) ; j++)
+	{
+		_putchar(er[j]);
+	}
 	exit(98);
 	return (0);
 }
