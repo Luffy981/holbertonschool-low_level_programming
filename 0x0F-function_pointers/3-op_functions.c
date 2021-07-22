@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * op_add - Function to sum 2 numbers
  * @a: Size of array
