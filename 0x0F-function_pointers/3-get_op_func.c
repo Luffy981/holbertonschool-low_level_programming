@@ -1,5 +1,6 @@
-#include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
 /**
  * get_op_func - Function pointer to function
  * @s: Parameter to evaluate
@@ -16,4 +17,15 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i;
+
+	i = 0;
+	while (i < 6)
+	{
+		if (*s == *ops[i].op)
+		{
+			return (*(ops[i]).f);
+		}
+		i++;
+	}
+	return (NULL);
 }
