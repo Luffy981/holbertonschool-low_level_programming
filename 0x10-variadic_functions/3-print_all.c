@@ -3,14 +3,14 @@
 #include "variadic_functions.h"
 /**
  * _strlen    - function to calculate string length
- * @cadena: String
+ * @str: String
  * Return: Return value
  */
-int _strlen(char const *cadena)
+int _strlen(char const *str)
 {
 	int i = 0;
 
-	while (cadena[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
@@ -23,32 +23,32 @@ int _strlen(char const *cadena)
  */
 void print_all(const char * const format, ...)
 {
-	va_list ap;
+	va_list p;
 	int i = 0;
-	char *texto;
+	char *text;
 	int count = _strlen(format);
 
-	va_start(ap, format);
+	va_start(p, format);
 
 	while (i < count)
 	{
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c", va_arg(ap, int));
+			printf("%c", va_arg(p, int));
 			break;
 		case 'i':
-			printf("%d", va_arg(ap, int));
+			printf("%d", va_arg(p, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(ap, double));
+			printf("%f", va_arg(p, double));
 			break;
 		case 's':
-			texto = va_arg(ap, char*);
-			if (texto == NULL)
+			text = va_arg(p, char*);
+			if (text == NULL)
 				printf("%s", "(nil)");
 
-			printf("%s", texto);
+			printf("%s", text);
 			break;
 		}
 
@@ -61,5 +61,5 @@ void print_all(const char * const format, ...)
 
 	printf("\n");
 
-	va_end(ap);
+	va_end(p);
 }
