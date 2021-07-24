@@ -47,8 +47,8 @@ void print_all(const char * const format, ...)
 			texto = va_arg(ap, char*);
 			if (texto == NULL)
 				printf("%s", "(nil)");
-			if (texto != NULL)
-				printf("%s", texto);
+
+			printf("%s", texto);
 			break;
 		}
 
