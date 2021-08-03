@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_str - function to print before the main function
+ * printf_str - function to print before the main function
  */
 void printf_str(void) __attribute__((constructor));
 
