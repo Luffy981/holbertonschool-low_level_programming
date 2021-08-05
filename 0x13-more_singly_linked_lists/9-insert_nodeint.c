@@ -1,21 +1,41 @@
 #include "lists.h"
+/**
+ * insert_nodeint_at_index - function insert node at index
+ * @idx : index of the node, starting at 0
+ * @head: Pointer to  head list
+ * @n: number
+ *
+ * Return: Return count
+ */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *newnode;
 	listint_t *node = *head;
 	listint_t *ar;
+	listint_t *h = *head;
 	unsigned int i = 0;
-	while(i<idx)
+	unsigned int count = 0;
+
+	if (*head == NULL)
+		return (NULL);
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
+	if (count < idx)
+		return (NULL);
+	while (i < idx)
 	{
 		node = node->next;
 		i++;
 	}
 	ar = node->next;
 	newnode = malloc(sizeof(listint_t));
-	if(newnode == NULL)
-		return(NULL);
+	if (newnode == NULL)
+		return (NULL);
 	newnode->n = n;
-	newnode->next=node;
-	node->next=ar;
-	return(newnode);
+	newnode->next = ar;
+	node->next = newnode;
+	return (newnode);
 }
