@@ -1,5 +1,24 @@
 #include "lists.h"
 /**
+ * free_listint - function to free memory
+ * @head: head
+ *
+ * Return: Return count
+ */
+void free_listint(listint_t *head)
+{
+	if (!head)
+	{
+		return;
+	}
+	if (head->next)
+	{
+		free_listint(head->next);
+	}
+	free(head);
+	head = NULL;
+}
+/**
  * free_listint2 - function to free memory
  * @head: head
  *
@@ -7,14 +26,13 @@
  */
 void free_listint2(listint_t **head)
 {
-	if (head == NULL || (*head) == NULL)
+	listint_t *p = *head;
+
+	if (!(head))
 	{
 		return;
 	}
-	if ((*head)->next)
-	{
-		free_listint2(&((*head)->next));
-	}
-	free(*head);
+	free_listint(p);
 	*head = NULL;
+	p = NULL;
 }
