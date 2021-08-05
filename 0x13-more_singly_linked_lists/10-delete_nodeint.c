@@ -24,17 +24,22 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	if (count < index)
 		return (-1);
-	while (i < index - 1)
+	if (index == 0)
 	{
-		node = node->next;
-		i++;
+		ar = *head;
+		newnode = ar->next;
+		*head = newnode;
+		free(ar);
+	} else
+	{
+		while (i < index - 1)
+		{
+			node = node->next;
+			i++;
+		}
+		ar = node->next;
+		node->next = ar->next;
+		free(ar);
 	}
-	ar = node->next;
-	newnode = malloc(sizeof(listint_t));
-	if (newnode == NULL)
-		return (-1);
-	newnode->next = ar->next;
-	node->next = newnode;
-	free(ar);
 	return (1);
 }
