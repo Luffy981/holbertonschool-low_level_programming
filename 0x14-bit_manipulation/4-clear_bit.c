@@ -32,13 +32,13 @@ unsigned int binary_to_uint(const char *b)
 	return (n);
 }
 /**
- * print_binary - function that converts a number to binary
+ * print_bin - function that converts a number to binary
  * @n:  Number to convert to binary
  * @index: Index
  * Return: Return n
  */
 
-int print_binary(unsigned long int n, unsigned int index)
+int print_bin(unsigned long int n, unsigned int index)
 {
 	char buffer[20];
 	char *buff = &(buffer[19]);
@@ -76,6 +76,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	r = 1 << index;
 	*n = *n | r;
-	*n = print_binary(*n, index);
+	*n = print_bin(*n, index);
 	return (1);
 }
