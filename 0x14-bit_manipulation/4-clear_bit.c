@@ -40,10 +40,10 @@ unsigned int binary_to_uint(const char *b)
 
 int print_bin(unsigned long int n, unsigned int index)
 {
-	char buffer[20];
-	char *buff = &(buffer[19]);
+	char buffer[30];
+	char *buff = &(buffer[29]);
 
-	buffer[19] = '\0';
+	buffer[29] = '\0';
 	buff--;
 	while (n  > 0)
 	{
