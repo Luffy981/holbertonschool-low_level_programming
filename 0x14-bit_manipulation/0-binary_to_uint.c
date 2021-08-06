@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * binary_to_uint - function that converts a binary number to an unsigned int
+ * @b:  Binary string
+ *
+ * Return: Return count
+ */
 unsigned int binary_to_uint(const char *b)
 {
 	const char *a = b;
@@ -6,9 +12,10 @@ unsigned int binary_to_uint(const char *b)
 	int m;
 	unsigned int f = 1;
 	unsigned int n = 0;
-	while(*a)
+
+	while (*a)
 	{
-		if (*a != '0' || *a != '1')
+		if (*a != '0' && *a != '1')
 		{
 			return (0);
 		}
@@ -18,16 +25,17 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 	m = c;
-	while(c > 0)
+	while (c > 1)
 	{
-		f *= 10;
+		f *= 2;
 		c--;
 	}
-	while (c > 0)
+	while (m > 0)
 	{
-		n += (*b * 10);
-		f /= 10;
+		n += ((*b - '0') * f);
+		f /= 2;
 		m--;
+		b++;
 	}
 	return (n);
 }
