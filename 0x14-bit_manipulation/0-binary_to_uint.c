@@ -13,6 +13,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int f = 1;
 	unsigned int n = 0;
 
+	if (b == NULL)
+		return (0);
 	while (*a)
 	{
 		if (*a != '0' && *a != '1')
@@ -22,8 +24,6 @@ unsigned int binary_to_uint(const char *b)
 		a++;
 		c++;
 	}
-	if (b == NULL)
-		return (0);
 	m = c;
 	while (c > 1)
 	{
