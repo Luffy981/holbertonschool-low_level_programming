@@ -10,7 +10,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned long int r;
 
 	if (index >= 704)
-		return(-1);
+		return (-1);
 	r = 1 << index;
 	*n = *n | r;
 	return (1);
