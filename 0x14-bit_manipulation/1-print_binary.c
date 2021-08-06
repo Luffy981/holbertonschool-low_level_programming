@@ -1,20 +1,14 @@
 #include "main.h"
-void obtain_residue(unsigned long int n)
-{
-	int Q;
-	unsigned long int R;
-	while (n < 2 || count >= 0)
-	{
-		n = n - 2;
-		count++;
-	}
-	Q = count;
-	R = n;
-	obtain_residue(Q);
-}
+/**
+ * print_binary - function that converts a number to binary
+ * @n:  Number to convert to binary
+ *
+ * Return: Return count
+ */
 void print_binary(unsigned long int n)
 {
-	int count = 0;
-	unsigned long int b;
-	obtain_residue(n);
+	if (n > 0)
+		return;
+	print_binary(n >> 1);
+	_putchar(n);
 }
