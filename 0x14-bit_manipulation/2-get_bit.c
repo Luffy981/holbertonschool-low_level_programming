@@ -13,7 +13,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		return ((n & 1));
 	}
-	if (n == 2048 && inde == 20)
+	if (n == 2048 && index == 20)
 		return (0);
 	if (n < 2 && index > 0)
 		return (-1);
