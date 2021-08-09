@@ -8,10 +8,22 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *node = *head;
-	if((*head)->next != NULL)
+	listint_t *ptr;
+
+	if ((*head)->next != NULL)
 	{
+		ptr = *head;
 		*head = reverse_listint(&((*head)->next));
+	} else
+	{
+		return (node);
 	}
-	node->next=head;
-	return(*head);
+	node = ptr->next;
+	while (node->next != NULL)
+	{
+		node = node->next;
+	}
+	node->next = ptr;
+	ptr->next = NULL;
+	return (*head);
 }
