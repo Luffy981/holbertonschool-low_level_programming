@@ -17,15 +17,20 @@ void copy_file(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	r = read(fd, buff, 1024);
 	df = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	r = read(fd, buff, 1024);
 	while (r > 0)
 	{
-		if (write(df, buff, r) != r | df == -1)
+		if (write(df, buff, r) != r || df == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
+	}
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
 	if (close(fd) == -1)
 	{
