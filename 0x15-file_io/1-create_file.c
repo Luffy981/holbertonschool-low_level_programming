@@ -1,4 +1,4 @@
-  #include "main.h"
+#include "main.h"
 /**
  * create_file - function reads a text file and prints it to the POSIX
  * @filename:  Number to evaluate
@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 		count++;
 	if (text_content != NULL)
 		write(fd, text_content, count);
-	if (!op)
+	if (!fd)
 		return (-1);
 	close(fd);
 	return (1);
