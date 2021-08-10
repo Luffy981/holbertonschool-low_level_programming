@@ -40,6 +40,8 @@ void copy_file(const char *file_from, const char *file_to)
 		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", df);
 		exit(100);
 	}
+	close(fd);
+	close(df);
 }
 /**
  * main - function main
