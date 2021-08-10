@@ -34,14 +34,12 @@ void copy_file(const char *file_from, const char *file_to)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
-	} else
-		close(fd);
+	}
 	if (close(df) == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", df);
 		exit(100);
-	} else
-		close(df);
+	}
 }
 /**
  * main - function main
