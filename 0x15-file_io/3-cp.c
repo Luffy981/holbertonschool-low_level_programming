@@ -18,8 +18,7 @@ void copy_file(const char *file_from, const char *file_to)
 		exit(98);
 	}
 	df = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	r = read(fd, buff, 1024);
-	while (r > 0)
+	while ((r = read(fd, buff, 1024)) > 0)
 	{
 		if (write(df, buff, r) != r || df == -1)
 		{
