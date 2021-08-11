@@ -30,7 +30,7 @@ void print_number(int n)
 	{
 		f *= 10;
 	}
-	while (b >= 1)/*imprime digitos de izquierda a derecha*/
+	while (b >= 1 || f > 0)/*imprime digitos de izquierda a derecha*/
 	{
 		t = (r / f) % 10;
 		f = f / 10;
