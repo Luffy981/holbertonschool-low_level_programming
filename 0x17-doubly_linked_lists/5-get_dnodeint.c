@@ -22,5 +22,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 	if (vodka->next == NULL)
 		return (NULL);
-	return(vodka);
+	return (vodka);
 }
