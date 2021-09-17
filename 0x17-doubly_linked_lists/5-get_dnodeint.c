@@ -11,8 +11,6 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	dlistint_t *vodka = head;
 	unsigned int count = 0;
 
-	if (head == NULL)
-		return (NULL);
 	while (vodka->next != NULL)
 	{
 		if (count == index)
