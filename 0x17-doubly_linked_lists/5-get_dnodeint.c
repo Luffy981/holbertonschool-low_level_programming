@@ -8,8 +8,8 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	listint_t *ptr = head;
-	listint_t *h = head;
+	dlistint_t *ptr = head;
+	dlistint_t *h = head;
 	unsigned int n = 0;
 	unsigned int count = 0;
 
