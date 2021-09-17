@@ -7,7 +7,7 @@
  *
  * Return: Return count
  */
-dlistint_t *insert_nodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 {
 	dlistint_t *newnode;
 	dlistint_t *node = *head;
@@ -27,7 +27,7 @@ dlistint_t *insert_nodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		return (NULL);
 	if (idx == 0)
 	{
-		newnode = malloc(sizeof(listint_t));
+		newnode = malloc(sizeof(dlistint_t));
 		if (newnode == NULL)
 			return (NULL);
 		newnode->n = n;
@@ -41,7 +41,7 @@ dlistint_t *insert_nodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 			i++;
 		}
 		ar = node->next;
-		newnode = malloc(sizeof(listint_t));
+		newnode = malloc(sizeof(dlistint_t));
 		if (newnode == NULL)
 			return (NULL);
 		newnode->n = n;
