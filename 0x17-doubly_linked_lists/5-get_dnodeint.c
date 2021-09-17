@@ -8,19 +8,24 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *vodka = head;
+	listint_t *ptr = head;
+	listint_t *h = head;
+	unsigned int n = 0;
 	unsigned int count = 0;
 
-	while (vodka->next != NULL)
+	if (head == NULL)
+		return (NULL);
+	while (h)
 	{
-		if (count == index)
-		{
-			break;
-		}
-		vodka = vodka->next;
+		h = h->next;
 		count++;
 	}
-	if (vodka->next == NULL)
+	if (count < index)
 		return (NULL);
-	return (vodka);
+	while (n < index && ptr != NULL)
+	{
+		ptr = ptr->next;
+		n++;
+	}
+	return (ptr);
 }
