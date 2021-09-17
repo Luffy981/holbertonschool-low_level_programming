@@ -15,11 +15,12 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		if (count == index)
 		{
-			return (vodka);
+			break;
 		}
 		vodka = vodka->next;
 		count++;
 	}
 	if (vodka->next == NULL)
 		return (NULL);
+	return(vodka);
 }
