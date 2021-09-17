@@ -1,16 +1,25 @@
 #include "lists.h"
 /**
- * free_dlistint - function to add elements to list
- * @head: Pointer of type list
+ * get_dnodeint_at_index  - function to add elements to list
+ * @head: Pointer of type list_t
+ * @index: Pointer of type list_t
+ *
+ * Return: Return count
  */
-void free_dlistint(dlistint_t *head)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *tmp = head;
+	dlistint_t *vodka = head;
+	int count = 0;
 
-	if (head == NULL)
+	while (vodka->next != NULL)
 	{
-		return;
+		if (count == index)
+		{
+			return (vodka);
+		}
+		vodka = vodka->next;
+		count++;
 	}
-	free_dlistint(head->next);
-	free(tmp);
+	if (vodka->next == NULL)
+		return (NULL);
 }
