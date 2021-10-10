@@ -13,9 +13,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *new_value = NULL;
 	char *new_key = NULL;
 	unsigned long int key_idx = 0;
+
 	if (!ht || !key || !(ht->array))
 		return (0);
-	key_idx = key_index((const unsigned char *)key, ht->size); 
+	key_idx = key_index((const unsigned char *)key, ht->size);
 	new_value = strdup(value);
 	hash_node = ht->array[key_idx];
 	while (hash_node)
