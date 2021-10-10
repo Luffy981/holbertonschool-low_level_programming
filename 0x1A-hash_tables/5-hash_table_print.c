@@ -15,7 +15,6 @@ void hash_table_print(const hash_table_t *ht)
 	putchar('{');
 	while (i < ht->size)
 	{
-		
 		hash_node = ht->array[i];
 		while (hash_node)
 		{
