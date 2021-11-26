@@ -13,6 +13,6 @@ OBJ = $(SRC:%.c=%.o)
 
 #************************ MAIN COMPILATION *************************
 
-all : 
+all :
 	$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
