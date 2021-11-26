@@ -9,9 +9,10 @@ CC = gcc
 
 #************************ DEPS COMPILATION *************************
 
-OBJ = main.o school.o
+OBJ = $(SRC:%.c=%.o)
 
 #************************ MAIN COMPILATION *************************
 
-all : $(OBJ)
+all : 
+	$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
