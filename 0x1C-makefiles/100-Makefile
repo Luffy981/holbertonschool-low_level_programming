@@ -5,8 +5,8 @@ SRC			=	main.c school.c
 
 #***************** DEPS *******************#
 
-CC			=	gcc
-CFLAGS		=	-Wall -Werror -Wextra -pedantic
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #************************ DEPS COMPILATION *************************
 
@@ -14,17 +14,17 @@ OBJ = $(SRC:%.c=%.o)
 
 #************************ MAIN COMPILATION *************************
 
-all		:		m.h $(OBJ)
-				$(CC) $(OBJ) -o $(NAME)
+all:	m.h $(OBJ)
+		$(CC) $(OBJ) -o $(NAME)
 
-clean	:
-				$(RM) *~ $(NAME)
+clean:
+		$(RM) *~ $(NAME)
 
-oclean	:
-				$(RM) $(OBJ)
+oclean:
+		$(RM) $(OBJ)
 
-fclean	:		clean oclean 
+fclean:		clean oclean 
 
-re		:		oclean all
+re:		oclean all
 
 .PHONY: clean oclean fclean re
