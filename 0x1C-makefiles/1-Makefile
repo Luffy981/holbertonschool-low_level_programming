@@ -1,7 +1,7 @@
 # make -f 1-Makefile
 SRC = school.c mainc.c
-
+# VARIABLE
 CC = gcc
-
+# VARIABLE
 all :
 	$(CC) $(SRC) -o school
