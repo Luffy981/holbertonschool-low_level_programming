@@ -1,0 +1,37 @@
+NAME = school
+#***************** SRC ********************#
+
+SRC = main.c school.c 
+
+#***************** DEPS *******************#
+
+CC = gcc
+
+#************************ DEPS COMPILATION *************************
+
+OBJ = $(SRC:%.c=%.o)
+
+#**********************************************
+
+RM = rm -f
+
+#********************FLAGS*****************************
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#************************ MAIN COMPILATION *************************
+
+all:	$(OBJ)
+		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+		$(RM) *~ $(NAME)
+
+oclean:
+		$(RM) $(OBJ)
+
+fclean:
+		$(RM) *~ $(NAME)
+		$(RM) $(OBJ)
+
+re:	oclean all
