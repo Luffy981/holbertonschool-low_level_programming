@@ -1,12 +1,12 @@
 #***************** SRC ********************#
 
-SRC			=	school.c main.c
+SRC = school.c main.c
 
 #***************** DEPS *******************#
 
-CC			=	gcc
+CC = gcc
 
 #************************ MAIN COMPILATION *************************
 
-all		:		
-				$(CC) $(SRC) -o school
+all:
+	$(CC) $(SRC) -o school
