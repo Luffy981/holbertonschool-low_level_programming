@@ -21,17 +21,17 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #************************ MAIN COMPILATION *************************
 
-all:	m.h $(OBJ)
-		$(CC) $(OBJ) -o $(NAME)
+all		:		m.h $(OBJ)
+				$(CC) $(OBJ) -o $(NAME)
 
-clean:
-		$(RM) *~ $(NAME)
+clean	:
+				$(RM) *~ $(NAME)
 
-oclean:
-		$(RM) $(OBJ)
+oclean	:
+				$(RM) $(OBJ)
 
-fclean:	clean oclean 
+fclean	:		clean oclean 
 
-re:	oclean all
+re		:		oclean all
 
 .PHONY: clean oclean fclean ree:	oclean all
