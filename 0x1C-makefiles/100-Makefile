@@ -1,23 +1,16 @@
-NAME = school
+NAME		=	school
 #***************** SRC ********************#
 
-SRC = main.c school.c 
+SRC			=	main.c school.c 
 
 #***************** DEPS *******************#
 
-CC = gcc
+CC			=	gcc
+CFLAGS		=	-Wall -Werror -Wextra -pedantic
 
 #************************ DEPS COMPILATION *************************
 
 OBJ = $(SRC:%.c=%.o)
-
-#**********************************************
-
-RM = rm -f
-
-#********************FLAGS*****************************
-
-CFLAGS = -Wall -Werror -Wextra -pedantic
 
 #************************ MAIN COMPILATION *************************
 
@@ -34,4 +27,4 @@ fclean	:		clean oclean
 
 re		:		oclean all
 
-.PHONY: clean oclean fclean ree:	oclean all
+.PHONY: clean oclean fclean re
