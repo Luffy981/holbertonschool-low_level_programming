@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * jump_search = Function to jump
+ * jump_search - Function to jump
  * @array: array
  * @size: lenght array
  * @value: value
